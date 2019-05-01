@@ -1,0 +1,17 @@
+CREATE TABLE auther (
+    AutherID int NOT NULL AUTO_INCREMENT,
+    auther_name varchar(255) NOT NULL,
+    created_date TIMESTRAMP,
+    PRIMARY KEY (AutherID)
+);
+
+CREATE TABLE images (
+    imageID int NOT NULL AUTO_INCREMENT,
+    title varchar(25) NOT NULL;
+    imageName varchar(255) NOT NULL,
+    imageDesc varchar(255) NOT NULL,
+    imageTags varchar(255) NOT NULL,
+    created_date TIMESTRAMP,
+    PRIMARY KEY (imageID),
+    FOREIGN KEY (AutherID) REFERENCES auther(AutherID)
+);
